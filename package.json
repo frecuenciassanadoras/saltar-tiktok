@@ -1,8 +1,0 @@
-{
-  "name": "neurosync-app",
-  "version": "1.0.0",
-  "description": "NeuroSync - Plataforma de Frecuencias Solfeggio",
-  "dependencies": {
-    "@supabase/supabase-js": "^2.39.0"
-  }
-}

@@ -17,16 +17,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 36px 20px 48px;
+            padding: 50px 20px 60px;
             overflow-x: hidden;
         }
 
         /* LOGO */
         .logo {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 900;
             letter-spacing: -1px;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
             animation: fadeUp 0.4s ease both;
         }
         .logo span { color: #38bdf8; }
@@ -39,34 +39,34 @@
             background: rgba(239,68,68,0.12);
             border: 1px solid rgba(239,68,68,0.4);
             color: #f87171;
-            padding: 6px 16px;
+            padding: 8px 20px;
             border-radius: 100px;
-            font-size: 0.73rem;
+            font-size: 0.8rem;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 22px;
+            margin-bottom: 30px;
             animation: fadeUp 0.5s ease both;
         }
         .dot {
-            width: 7px; height: 7px;
+            width: 8px; height: 8px;
             background: #ef4444;
             border-radius: 50%;
             animation: blink 1.5s ease-in-out infinite;
         }
         @keyframes blink {
             0%,100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.6); }
-            50%      { box-shadow: 0 0 0 5px rgba(239,68,68,0); }
+            50%      { box-shadow: 0 0 0 6px rgba(239,68,68,0); }
         }
 
         /* HEADLINE */
         h1 {
-            font-size: clamp(1.4rem, 5.5vw, 2rem);
+            font-size: clamp(1.8rem, 6vw, 2.4rem);
             font-weight: 900;
             text-align: center;
             line-height: 1.2;
-            max-width: 360px;
-            margin-bottom: 10px;
+            max-width: 500px;
+            margin-bottom: 15px;
             animation: fadeUp 0.6s ease both;
         }
         h1 em { color: #38bdf8; font-style: normal; }
@@ -74,208 +74,53 @@
         .sub {
             color: #9ca3af;
             text-align: center;
-            font-size: 0.88rem;
-            line-height: 1.5;
-            max-width: 320px;
-            margin-bottom: 30px;
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 400px;
+            margin-bottom: 40px;
             animation: fadeUp 0.7s ease both;
         }
-
-        /* ══════════════════════════════
-           PHONE MOCKUP
-        ══════════════════════════════ */
-        .phone-wrap {
-            width: 100%;
-            max-width: 300px;
-            margin-bottom: 30px;
-            animation: fadeUp 0.8s ease both;
-        }
-        .phone {
-            background: #13131a;
-            border-radius: 22px;
-            border: 1px solid rgba(255,255,255,0.07);
-            box-shadow: 0 24px 60px rgba(0,0,0,0.6);
-            overflow: visible;
-            position: relative;
-        }
-
-        /* Browser bar */
-        .bbar {
-            background: #0f0f14;
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-            padding: 10px 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            border-radius: 22px 22px 0 0;
-            position: relative;
-        }
-        .b-back { color: #4b5563; font-size: 0.85rem; }
-        .b-url {
-            flex: 1;
-            background: rgba(255,255,255,0.05);
-            border-radius: 8px;
-            padding: 5px 9px;
-            font-size: 0.58rem;
-            color: #6b7280;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        /* 3-dots — the star of the show */
-        .b-dots {
-            width: 34px; height: 34px;
-            border-radius: 9px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            color: white;
-            background: rgba(239,68,68,0.2);
-            border: 2px solid #ef4444;
-            position: relative;
-            flex-shrink: 0;
-            cursor: pointer;
-            animation: ringPop 2s ease-in-out infinite;
-        }
-        @keyframes ringPop {
-            0%,100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.5); }
-            50%      { box-shadow: 0 0 0 8px rgba(239,68,68,0.06); }
-        }
-
-        /* Floating "tap here" label */
-        .tap-hint {
-            position: absolute;
-            top: -42px;
-            right: 2px;
-            background: #ef4444;
-            color: white;
-            font-size: 0.63rem;
-            font-weight: 900;
-            padding: 4px 10px;
-            border-radius: 20px;
-            white-space: nowrap;
-            animation: floatY 1.4s ease-in-out infinite;
-            pointer-events: none;
-        }
-        .tap-hint::after {
-            content: '';
-            position: absolute;
-            bottom: -5px; right: 10px;
-            border: 5px solid transparent;
-            border-top-color: #ef4444;
-            border-bottom: none;
-        }
-        @keyframes floatY {
-            0%,100% { transform: translateY(0); }
-            50%      { transform: translateY(-4px); }
-        }
-
-        /* Dropdown */
-        .dropdown {
-            position: absolute;
-            top: 56px; right: 8px;
-            background: #1e2028;
-            border: 1px solid rgba(255,255,255,0.09);
-            border-radius: 14px;
-            overflow: hidden;
-            width: 210px;
-            box-shadow: 0 12px 36px rgba(0,0,0,0.55);
-            z-index: 30;
-            opacity: 0;
-            transform: scale(0.9) translateY(-8px);
-            transform-origin: top right;
-            transition: opacity 0.22s ease, transform 0.22s ease;
-            pointer-events: none;
-        }
-        .dropdown.open {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-            pointer-events: auto;
-        }
-        .dd-row {
-            padding: 11px 15px;
-            font-size: 0.78rem;
-            color: #d1d5db;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .dd-row:last-child { border: none; }
-        .dd-row i { width: 14px; text-align: center; font-size: 0.8rem; }
-        .dd-row.hl {
-            background: rgba(56,189,248,0.1);
-            color: #38bdf8;
-            font-weight: 800;
-        }
-        .dd-row.hl i { color: #38bdf8; }
-
-        /* Page area below bar */
-        .b-page {
-            height: 80px;
-            background: #0a0a0c;
-            border-radius: 0 0 22px 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px;
-        }
-        .b-content {
-            width: 100%;
-            height: 50px;
-            border-radius: 10px;
-            background: rgba(56,189,248,0.04);
-            border: 1px solid rgba(56,189,248,0.08);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-        .b-content i { color: #ef4444; font-size: 0.85rem; }
-        .b-content span { font-size: 0.68rem; color: #4b5563; }
 
         /* ══════════════════════════════
            STEPS
         ══════════════════════════════ */
         .steps {
             width: 100%;
-            max-width: 360px;
+            max-width: 400px;
             display: flex;
             flex-direction: column;
-            gap: 11px;
-            margin-bottom: 30px;
-            animation: fadeUp 0.9s ease both;
+            gap: 15px;
+            margin-bottom: 40px;
+            animation: fadeUp 0.8s ease both;
         }
         .step {
             display: flex;
             align-items: flex-start;
-            gap: 14px;
+            gap: 18px;
             background: rgba(56,189,248,0.05);
             border: 1px solid rgba(56,189,248,0.18);
-            border-radius: 16px;
-            padding: 14px 16px;
+            border-radius: 20px;
+            padding: 20px 22px;
         }
         .snum {
-            min-width: 32px; height: 32px;
+            min-width: 36px; height: 36px;
             border-radius: 50%;
             background: #38bdf8;
             color: #000;
             font-weight: 900;
-            font-size: 0.85rem;
+            font-size: 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
         }
-        .sbody h4 { font-weight: 800; font-size: 0.9rem; margin-bottom: 3px; color: #f3f4f6; }
-        .sbody p  { font-size: 0.77rem; color: #9ca3af; line-height: 1.4; }
+        .sbody h4 { font-weight: 800; font-size: 1.1rem; margin-bottom: 5px; color: #f3f4f6; }
+        .sbody p  { font-size: 0.9rem; color: #9ca3af; line-height: 1.5; }
         .pill {
             display: inline-block;
-            font-size: 0.68rem; font-weight: 700;
-            padding: 2px 9px; border-radius: 6px;
-            margin-top: 5px;
+            font-size: 0.75rem; font-weight: 700;
+            padding: 3px 12px; border-radius: 8px;
+            margin-top: 8px;
         }
         .pill-red  { background: rgba(239,68,68,0.15);  color: #f87171; }
         .pill-blue { background: rgba(56,189,248,0.12); color: #38bdf8; }
@@ -286,9 +131,9 @@
         ══════════════════════════════ */
         .cta-wrap {
             width: 100%;
-            max-width: 360px;
-            margin-bottom: 16px;
-            animation: fadeUp 1s ease both;
+            max-width: 400px;
+            margin-bottom: 20px;
+            animation: fadeUp 0.9s ease both;
         }
         .btn-cta {
             display: flex;
@@ -300,48 +145,48 @@
             color: #000;
             font-family: 'Outfit', sans-serif;
             font-weight: 900;
-            font-size: 1.05rem;
+            font-size: 1.2rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            padding: 18px 20px;
-            border-radius: 18px;
+            padding: 22px 20px;
+            border-radius: 20px;
             text-decoration: none;
             border: none;
             cursor: pointer;
-            box-shadow: 0 8px 30px rgba(56,189,248,0.3);
+            box-shadow: 0 10px 40px rgba(56,189,248,0.3);
             transition: transform 0.2s, box-shadow 0.2s;
             animation: glowPulse 2.5s ease-in-out infinite;
         }
-        .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(56,189,248,0.45); }
+        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 18px 50px rgba(56,189,248,0.45); }
         .btn-cta:active { transform: translateY(0); }
         @keyframes glowPulse {
-            0%,100% { box-shadow: 0 8px 30px rgba(56,189,248,0.3); }
-            50%      { box-shadow: 0 8px 40px rgba(56,189,248,0.55); }
+            0%,100% { box-shadow: 0 10px 40px rgba(56,189,248,0.3); }
+            50%      { box-shadow: 0 10px 50px rgba(56,189,248,0.55); }
         }
 
         /* COPY FALLBACK */
         .copy-wrap {
             width: 100%;
-            max-width: 360px;
-            margin-bottom: 22px;
-            animation: fadeUp 1.1s ease both;
+            max-width: 400px;
+            margin-bottom: 30px;
+            animation: fadeUp 1s ease both;
         }
-        .copy-label { font-size: 0.73rem; color: #4b5563; text-align: center; margin-bottom: 9px; }
+        .copy-label { font-size: 0.85rem; color: #4b5563; text-align: center; margin-bottom: 12px; }
         .btn-copy {
             width: 100%;
             background: rgba(255,255,255,0.04);
             border: 1px solid rgba(255,255,255,0.09);
             color: #9ca3af;
             font-family: 'Outfit', sans-serif;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             font-weight: 700;
-            padding: 12px 20px;
-            border-radius: 14px;
+            padding: 15px 20px;
+            border-radius: 16px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 9px;
+            gap: 10px;
             transition: background 0.2s, border-color 0.2s, color 0.2s;
         }
         .btn-copy:hover { background: rgba(255,255,255,0.07); border-color: rgba(56,189,248,0.3); color: #d1d5db; }
@@ -349,17 +194,17 @@
 
         /* TRUST */
         .trust {
-            font-size: 0.71rem;
+            font-size: 0.8rem;
             color: #374151;
             display: flex;
             align-items: center;
-            gap: 6px;
-            animation: fadeUp 1.2s ease both;
+            gap: 8px;
+            animation: fadeUp 1.1s ease both;
         }
         .trust i { color: #10b981; }
 
         @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(18px); }
+            from { opacity: 0; transform: translateY(20px); }
             to   { opacity: 1; transform: translateY(0); }
         }
     </style>
@@ -370,37 +215,11 @@
 
     <div class="badge">
         <div class="dot"></div>
-        Verificación de Acceso
+        Verificación de Acceso Seguro
     </div>
 
-    <h1>Abre en tu navegador para <em>ver la oferta completa</em></h1>
-    <p class="sub">TikTok bloquea los pagos por seguridad. Sigue los pasos o toca el botón de abajo.</p>
-
-    <!-- ── PHONE MOCKUP ── -->
-    <div class="phone-wrap">
-        <div class="phone">
-            <div class="bbar">
-                <i class="fas fa-chevron-left b-back"></i>
-                <div class="b-url">el-efecto-neurosync.netlify.app</div>
-                <div class="b-dots" id="dotsBtn" onclick="toggleDD()">
-                    <i class="fas fa-ellipsis-v"></i>
-                    <div class="tap-hint" id="tapHint">👆 TOCA AQUÍ</div>
-                </div>
-                <div class="dropdown" id="dropdown">
-                    <div class="dd-row"><i class="fas fa-redo"></i> Actualizar</div>
-                    <div class="dd-row"><i class="fas fa-search"></i> Buscar en página</div>
-                    <div class="dd-row hl"><i class="fas fa-external-link-alt"></i> Abrir en el navegador ✓</div>
-                    <div class="dd-row"><i class="fas fa-share-alt"></i> Compartir</div>
-                </div>
-            </div>
-            <div class="b-page">
-                <div class="b-content">
-                    <i class="fas fa-lock"></i>
-                    <span>Cargando NeuroSync...</span>
-                </div>
-            </div>
-        </div>
-    </div>
+    <h1>Abre en tu navegador para <em>completar tu compra</em></h1>
+    <p class="sub">TikTok bloquea los pagos por seguridad. Sigue estos pasos rápidos para acceder sin problemas.</p>
 
     <!-- ── STEPS ── -->
     <div class="steps">
@@ -408,24 +227,24 @@
             <div class="snum">1</div>
             <div class="sbody">
                 <h4>Toca los 3 puntos ⋯ arriba a la derecha</h4>
-                <p>Están en la barra del navegador interno de TikTok.</p>
-                <span class="pill pill-red">⬆ Esquina superior derecha</span>
+                <p>Están en la barra superior del navegador interno de TikTok.</p>
+                <span class="pill pill-red">Esquina superior derecha</span>
             </div>
         </div>
         <div class="step">
             <div class="snum">2</div>
             <div class="sbody">
                 <h4>Selecciona "Abrir en el navegador"</h4>
-                <p>En el menú que aparece, toca esa opción.</p>
+                <p>Busca esta opción en el menú que acaba de aparecer.</p>
                 <span class="pill pill-blue">Safari · Chrome</span>
             </div>
         </div>
         <div class="step">
             <div class="snum">3</div>
             <div class="sbody">
-                <h4>Toca el botón de abajo para acceder</h4>
-                <p>Una vez en tu navegador, accede directo a la oferta.</p>
-                <span class="pill pill-green">¡Sin restricciones!</span>
+                <h4>¡Listo! Toca el botón de abajo</h4>
+                <p>Una vez en tu navegador nativo, podrás pagar sin restricciones.</p>
+                <span class="pill pill-green">Acceso Inmediato</span>
             </div>
         </div>
     </div>
@@ -441,7 +260,7 @@
 
     <!-- ── COPY FALLBACK ── -->
     <div class="copy-wrap">
-        <p class="copy-label">¿No funciona? Copia el link y pégalo en Chrome o Safari:</p>
+        <p class="copy-label">¿No encuentras la opción? Copia el link y pégalo:</p>
         <button class="btn-copy" id="copyBtn" onclick="copyLink()">
             <i class="fas fa-copy"></i>
             <span id="copyTxt">Copiar link de acceso</span>
@@ -454,39 +273,9 @@
     </div>
 
     <script>
-    // ── Animate dropdown demo loop ──
-    var dd  = document.getElementById('dropdown');
-    var lbl = document.getElementById('tapHint');
-    var phase = 0;
-
-    function animLoop() {
-        if (phase === 0) {
-            // Show dropdown
-            dd.classList.add('open');
-            lbl.style.display = 'none';
-            phase = 1;
-            setTimeout(animLoop, 2800);
-        } else {
-            // Hide dropdown, show hint
-            dd.classList.remove('open');
-            lbl.style.display = '';
-            phase = 0;
-            setTimeout(animLoop, 2200);
-        }
-    }
-    setTimeout(animLoop, 1800);
-
-    // ── Manual toggle on tap ──
-    var ddOpen = false;
-    function toggleDD() {
-        ddOpen = !ddOpen;
-        dd.classList.toggle('open', ddOpen);
-        lbl.style.display = ddOpen ? 'none' : '';
-    }
-
     // ── Copy link ──
     function copyLink() {
-        var url = 'https://el-efecto-neurosync.netlify.app/ventas/';
+        var url = 'https://el-efecto-neurosync.netlify.app/';
         var btn = document.getElementById('copyBtn');
         var txt = document.getElementById('copyTxt');
 

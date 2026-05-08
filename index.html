@@ -20,10 +20,9 @@
                 setTimeout(function() { loader.style.display = 'none'; }, 400);
                 document.body.classList.add('show-bridge');
             } else {
-                // Si NO es social, redirigimos en 0.5s sin mostrar nada
-                setTimeout(function() {
-                    window.location.href = '/ventas/';
-                }, 500);
+                // Si NO es social, redirigimos DE INMEDIATO
+                // En navegadores nativos no queremos esperas, queremos que cargue ventas ya.
+                window.location.href = '/ventas/';
             }
         });
     </script>
@@ -40,7 +39,7 @@
             align-items: center;
             padding: 50px 20px 60px;
             overflow-x: hidden;
-            opacity: 0; /* Oculto por defecto */
+            opacity: 0; 
             transition: opacity 0.3s ease;
         }
 

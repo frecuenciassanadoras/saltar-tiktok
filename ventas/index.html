@@ -763,7 +763,7 @@
                         item.innerHTML = `
                             <div class="rank-num">#${index + 1}</div>
                             <div class="rank-info">
-                                <div class="rank-name">${country.f} ${user.name || 'Usuario'} ${range}</div>
+                                <div class="rank-name">${user.name || 'Usuario'} ${range}</div>
                                 <div class="rank-min">${user.total_minutes || 0} Minutos Sincronizados</div>
                             </div>
                             <div class="rank-trophy">${trophy}</div>
@@ -776,9 +776,9 @@
             } catch (e) {
                 // FALLBACK REALISTA SI NO HAY CONEXIÓN
                 const mockData = [
-                    {name: "Ricardo M.", min: 1420}, {name: "Elena G.", min: 1285},
-                    {name: "Javier S.", min: 940}, {name: "Sofia V.", min: 815},
-                    {name: "Mateo K.", min: 760}
+                    {name: "Ricardo M. 🇲🇽", min: 1420}, {name: "Elena G. 🇪🇸", min: 1285},
+                    {name: "Javier S. 🇨🇴", min: 940}, {name: "Sofia V. 🇦🇷", min: 815},
+                    {name: "Mateo K. 🇨🇱", min: 760}
                 ];
                 list.innerHTML = '';
                 mockData.forEach((user, index) => {
@@ -790,7 +790,7 @@
                     item.innerHTML = `
                         <div class="rank-num">#${index + 1}</div>
                         <div class="rank-info">
-                            <div class="rank-name">${country.f} ${user.name} ${range}</div>
+                            <div class="rank-name">${user.name} ${range}</div>
                             <div class="rank-min">${user.min} Minutos Sincronizados</div>
                         </div>
                         <div class="rank-trophy">${trophy}</div>

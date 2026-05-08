@@ -1,4 +1,0 @@
-# Clean URL aliases
-/link    /index.html    200
-/go      /index.html    200
-/ventas  /ventas/index.html  200

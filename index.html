@@ -88,8 +88,8 @@
         }
 
         .dots-circle {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             background: #f8f8f8;
             border-radius: 50%;
             display: flex;
@@ -98,29 +98,58 @@
             position: relative;
             margin-bottom: 60px;
             box-shadow: inset 0 2px 10px rgba(0,0,0,0.02);
+            overflow: visible;
         }
 
-        .dots-icon {
-            font-size: 2.5rem;
+        /* ANIMACIÓN DE ALTERNANCIA */
+        .content-dots, .content-text {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: alternateContent 4s infinite ease-in-out;
+        }
+
+        .content-dots {
+            font-size: 3rem;
             color: #000;
             letter-spacing: -2px;
             font-weight: 900;
             margin-top: -10px;
         }
 
+        .content-text {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: #000;
+            line-height: 1.2;
+            max-width: 100px;
+            opacity: 0;
+            animation-delay: 2s;
+        }
+
+        @keyframes alternateContent {
+            0%, 45%, 100% { opacity: 1; transform: scale(1); }
+            50%, 95% { opacity: 0; transform: scale(0.9); }
+        }
+
         /* CLASSIC PIXEL HAND CURSOR */
         .hand-cursor {
             position: absolute;
             bottom: 5px;
-            right: -5px;
-            width: 50px;
+            right: -10px;
+            width: 55px;
             height: auto;
+            z-index: 10;
             animation: clickAnim 1.2s infinite ease-in-out;
+            pointer-events: none;
         }
 
         @keyframes clickAnim {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(0.9); }
+            0%, 100% { transform: scale(1) translateY(0); }
+            50% { transform: scale(0.85) translateY(5px); }
         }
 
         /* ---- INSTRUCTIONS ---- */
@@ -182,8 +211,11 @@
 
     <div class="main-content">
         <div class="dots-circle">
-            <div class="dots-icon">...</div>
-            <!-- CLASSIC PIXEL HAND CURSOR IMAGE -->
+            <!-- CONTENIDO QUE ALTERNA -->
+            <div class="content-dots">...</div>
+            <div class="content-text">Abrir en el navegador</div>
+            
+            <!-- CLASSIC PIXEL HAND CURSOR -->
             <img src="https://www.freeiconspng.com/uploads/hand-cursor-png-15.png" alt="click" class="hand-cursor">
         </div>
 

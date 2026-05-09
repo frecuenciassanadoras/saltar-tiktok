@@ -3,389 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Acceso Verificado — NeuroSync™</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Continuar al sitio — NeuroSync™</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- META TAGS DE PREVISUALIZACIÓN (Para Instagram, WhatsApp, etc) -->
+    <!-- META TAGS DE PREVISUALIZACIÓN -->
     <meta property="og:title" content="NeuroSync™ | Acceso exclusivo">
     <meta property="og:description" content="Abre en tu navegador para desbloquear tu evolución.">
     <meta property="og:image" content="https://f005.backblazeb2.com/file/BACKUP-DE-IMAGENES/ESPIRITUALIDAD/NEUROSYNC2.0/PAGINA+DE+VENTAS+NUEVA/Dise%C3%B1o+sin+t%C3%ADtulo+(25).png">
-    <meta property="og:image:secure_url" content="https://f005.backblazeb2.com/file/BACKUP-DE-IMAGENES/ESPIRITUALIDAD/NEUROSYNC2.0/PAGINA+DE+VENTAS+NUEVA/Dise%C3%B1o+sin+t%C3%ADtulo+(25).png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
     <meta property="og:type" content="website">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://f005.backblazeb2.com/file/BACKUP-DE-IMAGENES/ESPIRITUALIDAD/NEUROSYNC2.0/PAGINA+DE+VENTAS+NUEVA/Dise%C3%B1o+sin+t%C3%ADtulo+(25).png">
-    
-    <meta itemprop="image" content="https://f005.backblazeb2.com/file/BACKUP-DE-IMAGENES/ESPIRITUALIDAD/NEUROSYNC2.0/PAGINA+DE+VENTAS+NUEVA/Dise%C3%B1o+sin+t%C3%ADtulo+(25).png">
-    <link rel="image_src" href="https://f005.backblazeb2.com/file/BACKUP-DE-IMAGENES/ESPIRITUALIDAD/NEUROSYNC2.0/PAGINA+DE+VENTAS+NUEVA/Dise%C3%B1o+sin+t%C3%ADtulo+(25).png">
+
     <script>
-        // REDIRECCIÓN INTELIGENTE (Plan B: El Definitivo)
-        window.addEventListener('DOMContentLoaded', function() {
+        // REDIRECCIÓN INTELIGENTE
+        (function() {
             var ua = navigator.userAgent || navigator.vendor || window.opera;
-            var isSocial = /TikTok|musical_ly|Instagram|FBAN|FBAV|Threads|Snapchat|LinkedIn|Twitter/i.test(ua);
+            var isSocial = /TikTok|musical_ly|Instagram|FBAN|FBAV|Threads|Snapchat/i.test(ua);
             
-            var loader = document.getElementById('main-loader');
-            
-            if (isSocial) {
-                // Si es social, quitamos loader y mostramos el puente
-                loader.style.opacity = '0';
-                setTimeout(function() { loader.style.display = 'none'; }, 400);
-                document.body.classList.add('show-bridge');
-            } else {
-                // Si NO es social, redirigimos DE INMEDIATO
-                // En navegadores nativos no queremos esperas, queremos que cargue ventas ya.
-                window.location.href = '/ventas/';
+            if (!isSocial) {
+                // Si NO es social, redirigimos DE INMEDIATO a ventas
+                window.location.replace('/ventas/');
             }
-        });
+        })();
     </script>
+
     <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Outfit', sans-serif;
-            background: #0a0a0c;
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px 20px 60px;
-            overflow-x: hidden;
-            opacity: 0; 
-            transition: opacity 0.3s ease;
-        }
-
-        body.show-bridge { opacity: 1; }
-
-        /* LOADER */
-        #main-loader {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: #0a0a0c;
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #000000;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            z-index: 9999;
-            transition: opacity 0.4s ease;
-        }
-        .spinner {
-            width: 40px; height: 40px;
-            border: 3px solid rgba(56, 189, 248, 0.1);
-            border-top: 3px solid #38bdf8;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-bottom: 15px;
-        }
-        @keyframes spin { to { transform: rotate(360deg); } }
-        .loader-text { font-size: 0.8rem; color: #4b5563; font-weight: 700; letter-spacing: 1px; }
-
-        /* LOGO */
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            letter-spacing: -1px;
-            margin-bottom: 20px;
-            animation: fadeUp 0.4s ease both;
-        }
-        .logo span { color: #38bdf8; }
-
-        /* BADGE */
-        .badge {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(239,68,68,0.12);
-            border: 1px solid rgba(239,68,68,0.4);
-            color: #f87171;
-            padding: 8px 20px;
-            border-radius: 100px;
-            font-size: 0.8rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 30px;
-            animation: fadeUp 0.5s ease both;
-        }
-        .dot {
-            width: 8px; height: 8px;
-            background: #ef4444;
-            border-radius: 50%;
-            animation: blink 1.5s ease-in-out infinite;
-        }
-        @keyframes blink {
-            0%,100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.6); }
-            50%      { box-shadow: 0 0 0 6px rgba(239,68,68,0); }
-        }
-
-        /* HEADLINE */
-        h1 {
-            font-size: clamp(1.8rem, 6vw, 2.4rem);
-            font-weight: 900;
+            padding: 20px;
+            overflow: hidden;
             text-align: center;
-            line-height: 1.2;
-            max-width: 500px;
-            margin-bottom: 15px;
-            animation: fadeUp 0.6s ease both;
         }
-        h1 em { color: #38bdf8; font-style: normal; }
 
-        .sub {
-            color: #9ca3af;
-            text-align: center;
-            font-size: 1rem;
-            line-height: 1.6;
-            max-width: 400px;
+        /* ---- TIKTOK LOGO ---- */
+        .tiktok-logo {
+            width: 130px;
             margin-bottom: 40px;
-            animation: fadeUp 0.7s ease both;
+            margin-top: -60px;
         }
 
-        /* ══════════════════════════════
-           STEPS
-        ══════════════════════════════ */
-        .steps {
+        /* ---- HAND DRAWN ARROW ---- */
+        .arrow-container {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            width: 100px;
+            height: 100px;
+        }
+        .arrow-svg {
             width: 100%;
-            max-width: 400px;
+            height: 100%;
+        }
+
+        /* ---- CENTRAL CIRCLE ---- */
+        .central-indicator {
+            width: 170px;
+            height: 170px;
+            background: #f4f4f4;
+            border-radius: 50%;
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            margin-bottom: 40px;
-            animation: fadeUp 0.8s ease both;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 50px;
+            position: relative;
         }
-        .step {
-            display: flex;
-            align-items: flex-start;
-            gap: 18px;
-            background: rgba(56,189,248,0.05);
-            border: 1px solid rgba(56,189,248,0.18);
-            border-radius: 20px;
-            padding: 20px 22px;
-        }
-        .snum {
-            min-width: 36px; height: 36px;
-            border-radius: 50%;
-            background: #38bdf8;
-            color: #000;
-            font-weight: 900;
+
+        .globe-icon {
             font-size: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        .sbody h4 { font-weight: 800; font-size: 1.1rem; margin-bottom: 5px; color: #f3f4f6; }
-        .sbody p  { font-size: 0.9rem; color: #9ca3af; line-height: 1.5; }
-        .pill {
-            display: inline-block;
-            font-size: 0.75rem; font-weight: 700;
-            padding: 3px 12px; border-radius: 8px;
-            margin-top: 8px;
-        }
-        .pill-red  { background: rgba(239,68,68,0.15);  color: #f87171; }
-        .pill-blue { background: rgba(56,189,248,0.12); color: #38bdf8; }
-        .pill-green{ background: rgba(16,185,129,0.12); color: #10b981; }
-
-        /* ══════════════════════════════
-           BIG CTA BUTTON
-        ══════════════════════════════ */
-        .cta-wrap {
-            width: 100%;
-            max-width: 400px;
-            margin-bottom: 20px;
-            animation: fadeUp 0.9s ease both;
-        }
-        .btn-cta {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            width: 100%;
-            background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
-            color: #000;
-            font-family: 'Outfit', sans-serif;
-            font-weight: 900;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 22px 20px;
-            border-radius: 20px;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 10px 40px rgba(56,189,248,0.3);
-            transition: transform 0.2s, box-shadow 0.2s;
-            animation: glowPulse 2.5s ease-in-out infinite;
-        }
-        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 18px 50px rgba(56,189,248,0.45); }
-        .btn-cta:active { transform: translateY(0); }
-        @keyframes glowPulse {
-            0%,100% { box-shadow: 0 10px 40px rgba(56,189,248,0.3); }
-            50%      { box-shadow: 0 10px 50px rgba(56,189,248,0.55); }
+            color: #555;
+            margin-bottom: 6px;
         }
 
-        /* COPY FALLBACK */
-        .copy-wrap {
-            width: 100%;
-            max-width: 400px;
-            margin-bottom: 30px;
-            animation: fadeUp 1s ease both;
-        }
-        .copy-label { font-size: 0.85rem; color: #4b5563; text-align: center; margin-bottom: 12px; }
-        .btn-copy {
-            width: 100%;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.09);
-            color: #9ca3af;
-            font-family: 'Outfit', sans-serif;
+        .central-text {
             font-size: 0.9rem;
             font-weight: 700;
-            padding: 15px 20px;
-            border-radius: 16px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            transition: background 0.2s, border-color 0.2s, color 0.2s;
-        }
-        .btn-copy:hover { background: rgba(255,255,255,0.07); border-color: rgba(56,189,248,0.3); color: #d1d5db; }
-        .btn-copy.ok   { background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.4); color: #10b981; }
-
-        /* TRUST */
-        .trust {
-            font-size: 0.8rem;
-            color: #374151;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            animation: fadeUp 1.1s ease both;
-        }
-        .trust i { color: #10b981; }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to   { opacity: 1; transform: translateY(0); }
+            line-height: 1.1;
+            color: #333;
+            max-width: 90px;
         }
 
+        .cursor-hand {
+            position: absolute;
+            bottom: 25px;
+            right: 15px;
+            font-size: 2.2rem;
+            color: #000;
+            animation: tap 1.5s infinite ease-in-out;
+        }
 
-        /* IMAGE STYLING */
-        .hero-image {
-            width: 100%;
+        @keyframes tap {
+            0%, 100% { transform: scale(1) translateY(0); }
+            50% { transform: scale(0.9) translateY(2px); }
+        }
+
+        /* ---- INSTRUCTIONS ---- */
+        .headline {
+            font-size: 1.7rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        .subheadline {
+            font-size: 1.05rem;
+            color: #444;
+            line-height: 1.5;
             max-width: 320px;
-            border-radius: 24px;
-            margin-bottom: 30px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            animation: fadeUp 0.55s ease both;
-            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .subheadline b {
+            color: #000;
+            font-weight: 800;
+        }
+
+        /* ---- FALLBACK ---- */
+        .copy-link {
+            margin-top: 45px;
+            font-size: 0.8rem;
+            color: #bbb;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Android Auto-intent UI */
+        #android-msg {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            background: #f4f4f4;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid #ddd;
         }
     </style>
 </head>
 <body>
 
-    <!-- LOADER INICIAL -->
-    <div id="main-loader">
-        <div class="spinner"></div>
-        <div class="loader-text">SINCRONIZANDO ACCESO...</div>
+    <!-- ARROW POINTING TO TOP RIGHT -->
+    <div class="arrow-container">
+        <svg class="arrow-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 85C35 75 65 55 90 15" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4 4" />
+            <path d="M75 15H90V30" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
     </div>
 
-    <div class="logo">Neuro<span>Sync™</span></div>
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/1200px-TikTok_logo.svg.png" alt="TikTok" class="tiktok-logo">
 
-    <div class="badge">
-        <div class="dot"></div>
-        Portal de Acceso Exclusivo
+    <div class="central-indicator">
+        <i class="fas fa-globe globe-icon"></i>
+        <div class="central-text">Abrir en el navegador</div>
+        <i class="fas fa-mouse-pointer cursor-hand"></i>
     </div>
 
-    <h1>Abre en tu navegador para <em>desbloquear tu evolución</em></h1>
-    <p class="sub">TikTok restringe el acceso a esta información. Sigue estos pasos para saltar las limitaciones y acceder al conocimiento completo.</p>
+    <h1 class="headline">Para abrir esta página</h1>
+    <p class="subheadline">
+        toca los <b>tres puntos ...</b> y elige <br>
+        <b>"Abrir en el navegador"</b>.
+    </p>
 
+    <div class="copy-link" onclick="copyLink()">Copiar enlace manualmente</div>
 
-
-    <!-- ── STEPS ── -->
-    <div class="steps">
-        <div class="step">
-            <div class="snum">1</div>
-            <div class="sbody">
-                <h4>Toca los 3 puntos ⋯ arriba a la derecha</h4>
-                <p>Están en la barra superior del navegador interno de TikTok.</p>
-                <span class="pill pill-red">Esquina superior derecha</span>
-            </div>
-        </div>
-        <div class="step">
-            <div class="snum">2</div>
-            <div class="sbody">
-                <h4>Selecciona "Abrir en el navegador"</h4>
-                <p>Busca esta opción en el menú que acaba de aparecer.</p>
-                <span class="pill pill-blue">Safari · Chrome</span>
-            </div>
-        </div>
-        <div class="step">
-            <div class="snum">3</div>
-            <div class="sbody">
-                <h4>¡Listo! Toca el botón de abajo</h4>
-                <p>Una vez en tu navegador, podrás acceder a todo el ecosistema y bonos exclusivos.</p>
-                <span class="pill pill-green">Acceso Inmediato</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- ── BIG CTA BUTTON ── -->
-    <div class="cta-wrap">
-        <a class="btn-cta" href="/ventas/" id="ctaBtn">
-            <i class="fas fa-bolt"></i>
-            ACCEDER A NEUROSYNC™
-            <i class="fas fa-arrow-right"></i>
-        </a>
-    </div>
-
-    <!-- ── COPY FALLBACK ── -->
-    <div class="copy-wrap">
-        <p class="copy-label">¿No encuentras la opción? Copia el link y pégalo:</p>
-        <button class="btn-copy" id="copyBtn" onclick="copyLink()">
-            <i class="fas fa-copy"></i>
-            <span id="copyTxt">Copiar link de acceso</span>
-        </button>
-    </div>
-
-    <div class="trust">
-        <i class="fas fa-shield-alt"></i>
-        Acceso Autorizado · Conexión Privada · NeuroSync™
-    </div>
+    <div id="android-msg">Optimizando acceso...</div>
 
     <script>
-    // ── Copy link ──
-    function copyLink() {
-        var url = 'https://el-efecto-neurosync.netlify.app/';
-        var btn = document.getElementById('copyBtn');
-        var txt = document.getElementById('copyTxt');
+    (function () {
+        var ua = navigator.userAgent || navigator.vendor || window.opera;
+        var isAndroid = /Android/i.test(ua);
 
-        function onOk() {
-            btn.classList.add('ok');
-            txt.textContent = '¡Copiado! Pégalo en Chrome o Safari';
+        if (isAndroid) {
+            document.getElementById('android-msg').style.display = 'block';
+            var cleanUrl = window.location.host + '/ventas/';
             setTimeout(function () {
-                btn.classList.remove('ok');
-                txt.textContent = 'Copiar link de acceso';
-            }, 3500);
+                try {
+                    window.location.href = 'intent://' + cleanUrl + '#Intent;scheme=https;package=com.android.chrome;end';
+                } catch (e) {}
+            }, 1500);
         }
+    })();
 
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(url).then(onOk).catch(function () { fallback(url, onOk); });
-        } else {
-            fallback(url, onOk);
-        }
-    }
-
-    function fallback(text, cb) {
-        var el = document.createElement('textarea');
-        el.value = text;
-        el.style.cssText = 'position:fixed;opacity:0;top:0;left:0;';
-        document.body.appendChild(el);
-        el.focus(); el.select();
-        try { document.execCommand('copy'); cb(); } catch (e) {}
-        document.body.removeChild(el);
+    function copyLink() {
+        var url = 'https://' + window.location.host + '/ventas/';
+        navigator.clipboard.writeText(url).then(function() {
+            alert("Enlace copiado.");
+        });
     }
     </script>
 

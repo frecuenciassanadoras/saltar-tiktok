@@ -57,14 +57,14 @@
             height: auto;
         }
 
-        /* ---- SOLID CURVED ARROW ---- */
+        /* ---- SOLID CURVED ARROW ANIMATED ---- */
         .arrow-container {
             position: absolute;
             top: 15px;
             right: 15px;
             width: 140px;
             height: 140px;
-            animation: arrowUpDown 1.2s infinite ease-in-out;
+            animation: arrowGlide 1.5s infinite ease-in-out;
             z-index: 100;
         }
         .arrow-svg {
@@ -72,12 +72,12 @@
             height: 100%;
         }
 
-        @keyframes arrowUpDown {
-            0%, 100% { transform: translateY(0) rotate(-5deg); }
-            50% { transform: translateY(15px) rotate(0deg); }
+        @keyframes arrowGlide {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(8px, -8px); }
         }
 
-        /* ---- CENTRAL CIRCLE WITH DOTS ---- */
+        /* ---- CENTRAL CIRCLE ---- */
         .main-content {
             flex: 1;
             display: flex;
@@ -135,21 +135,22 @@
             50%, 95% { opacity: 0; transform: scale(0.9); }
         }
 
-        /* CLASSIC PIXEL HAND CURSOR */
-        .hand-cursor {
+        /* BASIC MOUSE CURSOR */
+        .mouse-cursor {
             position: absolute;
-            bottom: 5px;
-            right: -10px;
-            width: 55px;
-            height: auto;
+            bottom: 20px;
+            right: 15px;
+            font-size: 2.2rem;
+            color: #000;
             z-index: 10;
-            animation: clickAnim 1.2s infinite ease-in-out;
+            animation: cursorMove 1.5s infinite ease-in-out;
             pointer-events: none;
+            text-shadow: 2px 2px 0 #fff;
         }
 
-        @keyframes clickAnim {
-            0%, 100% { transform: scale(1) translateY(0); }
-            50% { transform: scale(0.85) translateY(5px); }
+        @keyframes cursorMove {
+            0%, 100% { transform: scale(1) translate(0, 0); }
+            50% { transform: scale(0.9) translate(-5px, 5px); }
         }
 
         /* ---- INSTRUCTIONS ---- */
@@ -215,8 +216,8 @@
             <div class="content-dots">...</div>
             <div class="content-text">Abrir en el navegador</div>
             
-            <!-- CLASSIC PIXEL HAND CURSOR -->
-            <img src="https://www.freeiconspng.com/uploads/hand-cursor-png-15.png" alt="click" class="hand-cursor">
+            <!-- BASIC MOUSE CURSOR -->
+            <i class="fas fa-mouse-pointer mouse-cursor"></i>
         </div>
 
         <h1 class="headline">Para abrir esta página</h1>

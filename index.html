@@ -143,14 +143,18 @@
             font-size: 2.2rem;
             color: #000;
             z-index: 10;
-            animation: cursorMove 1.5s infinite ease-in-out;
+            animation: cursorMove 2.5s infinite ease-in-out;
             pointer-events: none;
             text-shadow: 2px 2px 0 #fff;
         }
 
         @keyframes cursorMove {
-            0%, 100% { transform: scale(1) translate(0, 0); }
-            50% { transform: scale(0.9) translate(-5px, 5px); }
+            0%, 100% { transform: translate(45px, 45px) scale(1); opacity: 0; }
+            20% { opacity: 1; }
+            45% { transform: translate(0, 0) scale(1); opacity: 1; }
+            55% { transform: translate(0, 0) scale(0.8); opacity: 1; }
+            65% { transform: translate(0, 0) scale(1); opacity: 1; }
+            80% { opacity: 1; }
         }
 
         /* ---- INSTRUCTIONS ---- */

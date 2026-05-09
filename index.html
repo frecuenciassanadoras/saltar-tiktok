@@ -43,80 +43,89 @@
             text-align: center;
         }
 
-        /* ---- TIKTOK LOGO ---- */
+        /* ---- TIKTOK LOGO (SVG) ---- */
         .tiktok-logo {
             width: 130px;
+            height: auto;
             margin-bottom: 40px;
-            margin-top: -60px;
+            margin-top: -40px;
         }
 
-        /* ---- HAND DRAWN ARROW ---- */
+        /* ---- HAND DRAWN ARROW ANIMATED ---- */
         .arrow-container {
             position: absolute;
-            top: 15px;
-            right: 35px;
-            width: 100px;
-            height: 100px;
+            top: 25px;
+            right: 40px;
+            width: 90px;
+            height: 90px;
+            animation: arrowBounce 1.5s infinite ease-in-out;
         }
         .arrow-svg {
             width: 100%;
             height: 100%;
         }
 
+        @keyframes arrowBounce {
+            0%, 100% { transform: translate(0, 0) rotate(5deg); }
+            50% { transform: translate(5px, -5px) rotate(0deg); }
+        }
+
         /* ---- CENTRAL CIRCLE ---- */
         .central-indicator {
-            width: 170px;
-            height: 170px;
-            background: #f4f4f4;
+            width: 190px;
+            height: 190px;
+            background: #f4f5f7;
             border-radius: 50%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
             position: relative;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
         }
 
         .globe-icon {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 6px;
+            font-size: 1.2rem;
+            color: #444;
+            margin-bottom: 10px;
         }
 
         .central-text {
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: 700;
-            line-height: 1.1;
-            color: #333;
-            max-width: 90px;
+            line-height: 1.2;
+            color: #000;
+            max-width: 110px;
         }
 
         .cursor-hand {
             position: absolute;
             bottom: 25px;
             right: 15px;
-            font-size: 2.2rem;
+            font-size: 2.8rem;
             color: #000;
-            animation: tap 1.5s infinite ease-in-out;
+            animation: handTap 1.2s infinite ease-in-out;
+            transform-origin: top left;
         }
 
-        @keyframes tap {
-            0%, 100% { transform: scale(1) translateY(0); }
-            50% { transform: scale(0.9) translateY(2px); }
+        @keyframes handTap {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(0.85) rotate(-5deg); }
         }
 
         /* ---- INSTRUCTIONS ---- */
         .headline {
-            font-size: 1.7rem;
+            font-size: 1.9rem;
             font-weight: 800;
             margin-bottom: 15px;
-            letter-spacing: -0.5px;
+            letter-spacing: -0.8px;
         }
 
         .subheadline {
-            font-size: 1.05rem;
-            color: #444;
-            line-height: 1.5;
+            font-size: 1.15rem;
+            color: #333;
+            line-height: 1.4;
             max-width: 320px;
         }
 
@@ -127,25 +136,24 @@
 
         /* ---- FALLBACK ---- */
         .copy-link {
-            margin-top: 45px;
-            font-size: 0.8rem;
-            color: #bbb;
+            margin-top: 60px;
+            font-size: 0.85rem;
+            color: #999;
             text-decoration: underline;
             cursor: pointer;
         }
 
-        /* Android Auto-intent UI */
         #android-msg {
             display: none;
             position: fixed;
             bottom: 30px;
-            background: #f4f4f4;
-            color: #333;
-            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            padding: 10px 25px;
             border-radius: 50px;
             font-size: 0.85rem;
             font-weight: 600;
-            border: 1px solid #ddd;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
     </style>
 </head>
@@ -154,17 +162,18 @@
     <!-- ARROW POINTING TO TOP RIGHT -->
     <div class="arrow-container">
         <svg class="arrow-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 85C35 75 65 55 90 15" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4 4" />
-            <path d="M75 15H90V30" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M15 85C35 75 65 55 90 15" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 5" />
+            <path d="M70 15H90V35" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
     </div>
 
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/1200px-TikTok_logo.svg.png" alt="TikTok" class="tiktok-logo">
+    <!-- TIKTOK LOGO PNG PROVIDED BY USER -->
+    <img src="https://f005.backblazeb2.com/file/BACKUP-DE-IMAGENES/ESPIRITUALIDAD/NEUROSYNC2.0/PAGINA+DE+VENTAS+NUEVA/TikTok_logo.png" alt="TikTok" class="tiktok-logo">
 
     <div class="central-indicator">
         <i class="fas fa-globe globe-icon"></i>
         <div class="central-text">Abrir en el navegador</div>
-        <i class="fas fa-mouse-pointer cursor-hand"></i>
+        <i class="fas fa-hand-pointer cursor-hand"></i>
     </div>
 
     <h1 class="headline">Para abrir esta página</h1>

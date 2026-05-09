@@ -187,9 +187,9 @@
         .pricing-section { margin-top: 40px; text-align: right; }
         .val-total { font-size: 1rem; color: #9ca3af; margin-bottom: 5px; }
         .val-total span { text-decoration: line-through; font-weight: 700; }
-        .price-final { display: flex; justify-content: flex-end; align-items: baseline; gap: 15px; }
-        .price-final .label { font-weight: 900; font-size: 1.5rem; text-transform: uppercase; }
-        .price-final .amount { font-weight: 950; font-size: 4.5rem; color: #0ea5e9; line-height: 0.9; }
+        .price-final { display: flex; justify-content: flex-end; align-items: baseline; gap: 15px; flex-wrap: wrap; }
+        .price-final .label { font-weight: 900; font-size: 1.3rem; text-transform: uppercase; }
+        .price-final .amount { font-weight: 950; font-size: 3.5rem; color: #0ea5e9; line-height: 0.9; }
 
         .btn-cta {
             width: 100%;
@@ -297,7 +297,7 @@
         @media (max-width: 992px) {
             .stack-container { grid-template-columns: 1fr; }
             .feature-grid-dark { grid-template-columns: 1fr; }
-            .price-final .amount { font-size: 3.5rem; }
+            .price-final .amount { font-size: 2.8rem; }
         }
 
         @media (max-width: 768px) {
@@ -431,7 +431,7 @@
                     </div>
                     <div class="price-final">
                         <span class="label text-gray-900">DESBLOQUEA TODO POR:</span>
-                        <span class="text-2xl text-gray-400 line-through mr-2 font-bold">$40.00</span>
+                        <span class="text-xl text-gray-400 line-through mr-1 font-bold">$40.00</span>
                         <span class="amount">$19.99 USD</span>
                     </div>
                 </div>
@@ -714,7 +714,7 @@
                 <div class="flex justify-between items-center mt-6 pt-4 border-t-2 border-sky-100 font-black text-xl">
                     <span>INVERSIÓN TOTAL:</span>
                     <div class="flex items-center gap-2">
-                        <span class="text-gray-400 line-through text-lg">$40.00</span>
+                        <span class="text-gray-400 line-through text-base">$40.00</span>
                         <span class="text-sky-600">$19.99 USD</span>
                     </div>
                 </div>
